@@ -1,0 +1,1 @@
+C:\Users\edoar\OneDrive\Desktop\Programmi\EserciziPDS\cancelable_latch\target\debug\cancelable_latch.exe: C:\Users\edoar\OneDrive\Desktop\Programmi\EserciziPDS\cancelable_latch\src\cancelable_latch.rs C:\Users\edoar\OneDrive\Desktop\Programmi\EserciziPDS\cancelable_latch\src\main.rs
