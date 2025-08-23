@@ -1,0 +1,1 @@
+C:\Users\edoar\OneDrive\Desktop\Programmi\EserciziPDS\count_down_lock\target\debug\count_down_lock.exe: C:\Users\edoar\OneDrive\Desktop\Programmi\EserciziPDS\count_down_lock\src\count_down_lock.rs C:\Users\edoar\OneDrive\Desktop\Programmi\EserciziPDS\count_down_lock\src\main.rs
