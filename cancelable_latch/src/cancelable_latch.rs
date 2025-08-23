@@ -89,3 +89,25 @@ fn test_cancelable_latch_success() {
         handle.join().unwrap();
     }
 }
+
+#[test]
+fn test_cancelable_latch_timeout() {
+    let latch_timeout = Arc::new(CancelableLatchImpl::new(1));
+    let mut handles = Vec::new();
+    //Waiter
+    let latch_timeout_waiter = Arc::clone(&latch_timeout);
+    handles.push(thread::spawn(move || {
+        println!("[Waiter] Waiting...");
+        let res = latch_timeout_waiter.wait_timeout(Duration::from_millis(1000));
+        println!("[Waiter] Result of wait: {:?} (Timeout expected)", res);
+    }));
+    //Worker
+    let latch_timeout_worker = Arc::clone(&latch_timeout);
+    handles.push(thread::spawn(move || {
+        thread::sleep(Duration::from_millis(1500));
+        latch_timeout_worker.count_down();
+    }));
+    for handle in handles {
+        handle.join().unwrap();
+    }
+}
